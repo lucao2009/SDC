@@ -1,14 +1,14 @@
 package com.nelioalves.cursomc.domain;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
+//import java.util.ArrayList;
+//import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+//import javax.persistence.ManyToMany;
 
 @Entity
 public class Categoria implements Serializable {
@@ -22,8 +22,6 @@ public class Categoria implements Serializable {
 	
 	//eu coloco esse mapeamento no lado que eu quero que venha os objetos associados
 	//implementando o outro lado do relacionamento
-	@ManyToMany(mappedBy = "categorias")
-	private List<Produto> produtos = new ArrayList<Produto>();  
 	
 	public Categoria() {
 		super();
@@ -51,15 +49,6 @@ public class Categoria implements Serializable {
 		this.nome = nome;
 	}
 
-
-	public List<Produto> getProdutos() {
-		return produtos;
-	}
-
-	public void setProdutos(List<Produto> produtos) {
-		this.produtos = produtos;
-	}
-	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
